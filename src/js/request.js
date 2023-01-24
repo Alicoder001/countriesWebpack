@@ -2,9 +2,8 @@ import loaderF from "./loader";
 async function getData(recourse) {
 	loaderF(true);
 	const request = await fetch(recourse);
-	console.log(request);
 	if (!request.ok) {
-		loaderF(false);
+		// loaderF(false);
 		throw new Error("Nimadir xato !!!");
 	}
 	const data = await request.json();
